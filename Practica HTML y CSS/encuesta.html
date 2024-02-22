@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+          <ul class="main-nav">
+              <li class="main-nav__item"><a href="inicio.html">Inicio</a></li>
+              <li class="main-nav__item"><a href="wcag.html">WCAG</a></li>
+              <li class="main-nav__item"><a href="validadores.html">Validadores</a></li>
+              <li class="main-nav__item"><a href="encuesta.html">Encuesta</a></li>
+          </ul>
+      </nav>
+  </header>
+  <h1>Desarrollo de Sitios Web Accesibles</h1>
+  <h2>Encuesta sobre accesibilidad</h2>
+  <form action="">
+    <label class="texto" for="fullname">¿Cuál es tu nombre completo?</label><br>
+    <input class="campo" type="text" id="fullname" name="fullname" placeholder="Tu nombre"><br><br>
+
+    <label class="texto" for="email">¿Cuál es tu email?</label><br>
+    <input class="campo" type="text" id="email" name="fullname"><br><br>
+    
+    <label class="texto" for="date">¿En qué  fecha te enteraste de la accesibilidad web?</label><br>
+    <input class="campo" type="date" id="date" name="date"><br><br>
+
+    <label class="texto">¿Consideras que es importante la accesibilidad?</label><br>
+    <input type="radio" id="si" name="percepcion" value="Si">
+    <label for="si">Si</label><br>
+    <input type="radio" id="no" name="percepcion" value="No">
+    <label for="no">No</label><br>
+    <input type="radio" id="un poco" name="percepcion" value="Un poco">
+    <label for="un poco">Un poco</label><br><br>
+
+   
+    <label class="texto" for="">¿Cuál principio te pareció más interesante?</label><br>
+    <select class="campo" name="principios">
+      <option value="Perceptible">Perceptible</option>
+      <option value="Operable">Operable</option>
+      <option value="Comprensible">Comprensible</option>
+      <option value="Robusto">Robusto</option>
+    </select><br><br>
+    <button class="boton">Enviar</button>
+    
+  </form>
+
+  </body>
+</html>
+
