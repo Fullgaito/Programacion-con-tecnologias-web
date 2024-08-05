@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body >
+    <h1>Libros</h1>
     <table>
         <thead>
             <tr>
@@ -15,16 +16,18 @@
             </tr>
         </thead>
         <tbody>
-            @foreach {$books as $book}
+            @foreach($books as $book)
                 <tr>
                     <td>{{$book->title}}</td>
                     <td>{{$book->author}}</td>
                     <td>{{$book->category}}</td>
-                    
                 </tr>
             @endforeach
+            
         </tbody>
+        
             
     </table>
+    <a href="{{route('books.create')}}">Crear Libro</a>
 </body>
 </html>
