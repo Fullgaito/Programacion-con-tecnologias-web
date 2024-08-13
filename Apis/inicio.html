@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo consumo API</title>
+    <script src="https://cdn.plot.ly/plotly-2.34.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="myDiv" style="width:600px;height:250px;"></div>
+    <button type="button" onclick="consumirAPI()">Consumir API</button>
+    <script src="api.js"></script>
+    <script>
+        var trace1 = {
+        type: 'bar',
+        x: ["hombres","mujeres"],
+        y: [5, 10, 2, 8],
+        marker: {
+            color: '#C8A2C8',
+            line: {
+                width: 2.5
+            }
+        }
+        };
+        
+
+        var data = [ trace1];
+        
+
+        var layout = { 
+        title: 'Responsive to window\'s size!',
+        font: {size: 18}
+        };
+
+        var config = {responsive: true}
+
+        Plotly.newPlot('myDiv', data, layout, config );
+
+    </script>
+</body>
+</html>
