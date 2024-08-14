@@ -8,7 +8,7 @@ function consumirAPI(){
     fetch("https://www.datos.gov.co/resource/6rvy-hipa.json")
     .then(datos=>datos.json()) //ecmascrippt
     .then(function (datos){
-        datos.forEach(element => {
+        datos.forEach(elemento => {
             if(elemento.sexo=="Mujeres"){
                 mujeres=mujeres+1;
             }else{
@@ -29,16 +29,13 @@ function consumirAPI(){
             
     
             var data = [ trace1];
-            
-    
+
             var layout = { 
-            title: 'Responsive to window\'s size!',
-            font: {size: 18}
-            };
-    
-            var config = {responsive: true}
-    
-            Plotly.newPlot('myDiv', data, layout, config );
+                title: ' Hombres y mujeres de la parte administrativa de la UNAL',
+                font: {size: 10}
+                };
+            
+            Plotly.newPlot('myDiv', data,layout);
     }
 
     );
