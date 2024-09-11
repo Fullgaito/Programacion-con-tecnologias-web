@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta htpp-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script type="text/babel">
+    const container =document.getElementById('app');
+    const root=ReactDOM.createRoot(container);
+    function PrimerComponente(){
+        return(
+            <h1>Aca se muestra un H1 desde un primer componente</h1>
+        );
+    }
+    const SegundaComponente=()=>{
+        return(
+            <h2>Aca se muestra un H2 </h2>
+        );
+    }
+    root.render(
+        <div>
+        <h1>Hola Mundo</h1>
+        <PrimerComponente/>
+        <SegundaComponente/>
+        </div>
+    );
+</script>
+</html>
