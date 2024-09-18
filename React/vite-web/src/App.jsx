@@ -1,35 +1,43 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import{BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Inicio from './Inicio'
+import AcercaDe from './AcercaDe'
+import VideoJuegos from './VideoJuegos'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Router>
+      <div> 
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul>
+              <Link to='/' className='nav-link'>Inicio</Link>
+              <Link to='/about' className='nav-link'>Acerca de</Link>
+              <Link to='/videoJuegos' className='nav-link'>VideoJuegos</Link>
+            </ul>
+          </div>
+        </nav>
+        <Routes>
+          <Route path="/videoJuegos" element={<VideoJuegos/>}/>
+        </Routes>
+        <Routes>
+          <Route path="/about" element={<AcercaDe/>}/>
+        </Routes>
+        <Routes>
+          <Route path="/" element={<Inicio/>}/>
+        </Routes>
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </Router>
   )
+  
+
 }
 
 export default App
