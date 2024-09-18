@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Create from './Create';
 import Table from './Table';
+import Update from './Update';
 
 function AppRouter() {
     return (
@@ -23,6 +24,7 @@ function AppRouter() {
                     <Route path='/' element={<h2>Inicio</h2>} />
                     <Route path='/create' element={<Create />} />
                     <Route path='/table' element={<Table />} />
+                    <Route path="/edit/:id" element={<Update />} /> {/* Mostrar la página de edición */}
                 </Routes>
             </div>
         </Router>

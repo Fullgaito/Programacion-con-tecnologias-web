@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom'; 
+
 export default function Table() {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     function fethData() {
         fetch('http://localhost:8000/api/books')
@@ -28,6 +31,19 @@ export default function Table() {
         alert('Error:', error.message);
     });
 }
+    function onUpdate(id) {
+        fetch(`http://localhost:8000/api/books/${id}`, {
+            method: 'PUT'
+        })
+        .then(response=>response.json())
+        .then(()=>{
+            fethData();
+            navigate(`/edit/${id}`);
+        })
+        .catch(error=>{
+            alert('Error',error.message);
+        });
+    }
 
 
   return (

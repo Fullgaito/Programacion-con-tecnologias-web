@@ -24,7 +24,7 @@ export default function Create() {
         })
         .then((response) => response.json())
         .then((data) => {
-            alert('Success:', data);
+            alert('Success:Libro creado', data);
 
             setTitle('');
             setYear('');
